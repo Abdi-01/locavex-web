@@ -10,7 +10,7 @@ const HeaderPage = (props) => {
         <div className='py-2'>
             <nav className="navbar navbar-expand-lg navbar-light bg-light bg-transparent">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" >
+                    <Link className="navbar-brand" href='/'>
                         <Box width={["15%", "4%"]} marginX="4">
                             <Image
                                 src={require('../assets/logo/logo_full.png')}
@@ -25,13 +25,13 @@ const HeaderPage = (props) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Design</a>
+                                <Link className="nav-link" aria-current="page" href="/">Design</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Products</a>
+                                <Link className="nav-link" href="/">Products</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <Link className="nav-link" href="/">About</Link>
                             </li>
                         </ul>
                         <div className="d-flex shadow p-2 rounded">
