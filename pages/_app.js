@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Google Analytics Import
 import * as gtag from "../lib/gtag"
-import Script from 'next/Script';
+import Script from 'next/script';
 
 
 function MyApp({ Component, pageProps }) {
