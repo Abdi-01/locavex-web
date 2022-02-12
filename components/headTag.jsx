@@ -10,30 +10,25 @@ const HeadTag = (props) => {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         ></link>
-        {/* <title>{props.title} | Konveksi Lokal</title> */}
-        <meta property="og:title" content={`${props.title} | Konveksi Lokal`} key="title" />
-        <meta property="og:description" content={props.description} />
+        {/* <!-- Primary Meta Tags --> */}
+        {/* <title>Locavex | Konveksi Lokal Lamongan</title> */}
+        <meta name="title" content="Locavex | Konveksi Lokal Lamongan" />
+        <meta name="description" content="Produsen Kaos Polos dan Sablon DTF Custom" />
         <meta property="og:image" itemProp="image" content={props.image} key="ogimage" />
-        <meta property="og:site_name" content={"Locavex"} key="ogsitename" />
+
+        {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:title" content="Locavex | Konveksi Lokal Lamongan" />
+        <meta property="og:description" content="Produsen Kaos Polos dan Sablon DTF Custom" />
+        <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
 
-        {/* <!-- HTML Meta Tags --> */}
-        <meta name="description" content="All Products Collection by Locavex" />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        {/* Get url from parent component by props */}
-        <meta property="og:url" content={props.url} />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="https://locavex.vercel.app/" />
-        <meta property="twitter:url" content="https://locavex.vercel.app/" />
-        <meta name="twitter:title" content={`${props.title} | Commerce`} />
-        <meta name="twitter:description" content={props.description} />
-        <meta name="twitter:image" content={props.image} />
-
-        {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
-
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="Locavex | Konveksi Lokal Lamongan" />
+        <meta property="twitter:description" content="Produsen Kaos Polos dan Sablon DTF Custom" />
+        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
 
     </Head>
 }
