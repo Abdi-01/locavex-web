@@ -47,17 +47,17 @@ const LandingPage = (props) => {
                             Untuk sat ini kami lebih berfokus ke produksi kaos polos dan menerima pemesanan sablon custom.
                         </Text>
                         <div className='my-4 d-flex justify-content-center flex-wrap'>
-                            <a href='https://wa.link/h28uow' target="_blank">
+                            <a href='https://wa.link/h28uow' target="_blank" rel="noopener noreferrer">
                                 <Button boxShadow='xl' type='button' variant='ghost' colorScheme='whatsapp' >
                                     Tanya Admin <FaWhatsapp className='mx-2' />
                                 </Button>
                             </a>
-                            <a href='https://www.instagram.com/locavex_id/' target="_blank">
+                            <a href='https://www.instagram.com/locavex_id/' target="_blank" rel="noopener noreferrer">
                                 <Button boxShadow='xl' type='button' variant='ghost' colorScheme='facebook' >
                                     Instagram  <FaInstagram className='mx-2' />
                                 </Button>
                             </a>
-                            <a href='https://www.tokopedia.com/locavex' target="_blank">
+                            <a href='https://www.tokopedia.com/locavex' target="_blank" rel="noopener noreferrer">
                                 <Button boxShadow='xl' type='button' variant='ghost' colorScheme='whatsapp' >
                                     Tokopedia <Box width="1.2em" marginX="2">
                                         <Image
