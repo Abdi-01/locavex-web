@@ -26,8 +26,8 @@ const HeadTag = (props) => {
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="commerce-next-abdi-01.vercel.app" />
-        <meta property="twitter:url" content="https://commerce-next-abdi-01.vercel.app/products/" />
+        <meta property="twitter:domain" content="https://locavex.vercel.app/" />
+        <meta property="twitter:url" content="https://locavex.vercel.app/" />
         <meta name="twitter:title" content={`${props.title} | Commerce`} />
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:image" content={props.image} />

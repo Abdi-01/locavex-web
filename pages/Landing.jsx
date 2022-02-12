@@ -17,7 +17,7 @@ const LandingPage = (props) => {
                 description="All About Locavex"
                 // image="https://ibb.co/fvw4CWK"
                 image="https://i.ibb.co/rsr4ZhL/preview.png"
-                url='http://localhost:3000/'
+                url='https://locavex.vercel.app/'
             />
             <div className='container'>
                 <HeaderPage />
