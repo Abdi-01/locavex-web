@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+
+
+.scrollcontainer {
+  /* border: 3px solid black; */
+  border-radius: 5px;
+  overflow : hidden;
+  /* max-height: 8.5vh; */
+}
+
+.scrolltext {
+  /* height: 10%; */
+
+  /* animation properties */
+  -moz-transform: translateY(1%);
+  -webkit-transform: translateY(1%);
+  transform: translateY(1%);
+  
+  -moz-animation: my-animation 3s ease infinite;
+  -webkit-animation: my-animation 3s ease infinite;
+  animation: my-animation 3s ease infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateY(1%); }
+  to { -moz-transform: translateY(-75%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateY(1%); }
+  to { -webkit-transform: translateY(-75%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateY(1%);
+    -webkit-transform: translateY(1%);
+    transform: translateY(1%);
+  }
+  to {
+    -moz-transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%);
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .bgsection{
+    background-image: url('../assets/decor/decor-white-1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: right;
+  }
+}
