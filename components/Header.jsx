@@ -25,17 +25,29 @@ const HeaderPage = (props) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" href="/">Design</Link>
+                                <Link aria-current="page" href="/">
+                                    <a className="nav-link">
+                                        Design
+                                    </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="/">Products</Link>
+                                <Link href="/">
+                                    <a className="nav-link">
+                                        Products
+                                    </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="/">About</Link>
+                                <Link href="/">
+                                    <a className="nav-link">
+                                        About
+                                    </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className="d-flex shadow p-2 rounded">
-                        Hi, &nbsp;<Text fontWeight='bold'> Locapeople</Text>
+                            Hi, &nbsp;<Text fontWeight='bold'> Locapeople</Text>
                             {/* <Button m="2" bgColor="#FDA551">Login</Button>
                             <Button m="2" variant="outline">Register</Button> */}
                         </div>
