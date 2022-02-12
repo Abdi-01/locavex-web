@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as gtag from "../lib/gtag"
 import Script from 'next/Script';
 
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
