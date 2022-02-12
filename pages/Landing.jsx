@@ -13,7 +13,7 @@ const LandingPage = (props) => {
         // <Container maxW='container.xl'>
         <div className={styles.bgsection}>
             <HeadTag
-                title="Locavex"
+                title="Locavex | Konveksi Lokal Lamongan"
                 description="All About Locavex"
                 // image="https://ibb.co/fvw4CWK"
                 image="https://i.ibb.co/rsr4ZhL/preview.png"
@@ -140,7 +140,7 @@ const LandingPage = (props) => {
                                 <Text fontSize={{ base: '5xl', lg: '9xl' }} color='#FDA551' textShadow='2px 1px #465257' >
                                     ME
                                 </Text>
-                                <Text mx='4' fontSize={{ base: '5xl', lg: '9xl' }} color='#465257' fontWeight='bold'>
+                                <Text mx='4' fontSize={{ base: '4xl', lg: '8xl' }} color='#465257' fontWeight='bold'>
                                     <FaLocationArrow />
                                 </Text>
                             </div>

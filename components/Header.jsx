@@ -39,6 +39,13 @@ const HeaderPage = (props) => {
                                 </Link>
                             </li>
                             <li className="nav-item">
+                                <Link href="/calculate">
+                                    <a className="nav-link">
+                                        Estimate Order
+                                    </a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link href="/">
                                     <a className="nav-link">
                                         About

@@ -12,7 +12,7 @@ const FooterPage = (props) => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-4 '>
-                        <Link className="navbar-brand m-auto" href="/">
+                        <Link className="navbar-brand" href="/">
                             <Box width="80%" marginX="4">
                                 <Image
                                     src={require('../assets/logo/logo-white-transparent.png')}
@@ -21,6 +21,9 @@ const FooterPage = (props) => {
                                 />
                             </Box>
                         </Link>
+                        <Text className='text-muted text-center'>
+                           Locavex Indonesia, Dsn.Blumbang Rt02/Rw03, Dradah Blumbang, Kedungpring, Kabupaten Lamongan, Jawa Timur 62272
+                        </Text>
                     </div>
                     <div className='col-md-4 d-none d-md-flex justify-content-center align-items-center'>
                         <FaWhatsapp color='white' className='mx-2' fontSize="2em" />
@@ -45,7 +48,7 @@ const FooterPage = (props) => {
                         </Box>
                     </div>
                 </div>
-                <p className='text-center text-muted my-3'>&copy;Copyright 2021 aldev</p>
+                <p className='text-center text-muted my-3'>Copyright &copy; 2021 aldev</p>
             </div>
         </div>
         // </Box>

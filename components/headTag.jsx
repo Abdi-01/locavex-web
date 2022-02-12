@@ -11,7 +11,7 @@ const HeadTag = (props) => {
             rel="stylesheet"
         ></link>
         {/* <!-- Primary Meta Tags --> */}
-        {/* <title>Locavex | Konveksi Lokal Lamongan</title> */}
+        <title>{props.title?props.title:"Locavex | Konveksi Lokal Lamongan"}</title>
         <meta name="title" content="Locavex | Konveksi Lokal Lamongan" />
         <meta name="description" content="Produsen Kaos Polos dan Sablon DTF Custom" />
         <meta property="og:image" itemProp="image" content={props.image} key="ogimage" />
