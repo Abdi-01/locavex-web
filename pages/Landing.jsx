@@ -149,7 +149,7 @@ const LandingPage = (props) => {
                             <iframe className='shadow' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.17067286635!2d112.18656751525893!3d-7.221364672914585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7821b1698288e7%3A0xeed40de92230ce51!2sLocavex%20Indonesia!5e0!3m2!1sid!2sid!4v1644641592072!5m2!1sid!2sid"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0 }} allowfullscreen="" loading="lazy"></iframe>
+                                style={{ border: 0 }} loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
