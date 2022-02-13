@@ -1,4 +1,5 @@
-import { Text, FormControl, FormLabel, Input, RadioGroup, Stack, Radio, InputGroup, InputLeftAddon, Checkbox, Button } from '@chakra-ui/react';
+import { Text, FormControl, FormLabel, Input, RadioGroup, Stack, Radio, InputGroup, InputLeftAddon, Checkbox, Button, Collapse, Box } from '@chakra-ui/react';
+import Image from 'next/image';
 import React from 'react';
 import FooterPage from '../components/Footer';
 import HeaderPage from '../components/Header';
@@ -7,6 +8,9 @@ import HeadTag from '../components/headTag';
 const CalculatePage = (props) => {
     const [proType, setProType] = React.useState('1')
     const [matType, setMatType] = React.useState('1')
+    const [sablonType, setSablonType] = React.useState('1')
+
+    const [openDTF, setOpenDTF] = React.useState(false);
 
     const [total, setTotal] = React.useState(0)
 
@@ -83,6 +87,34 @@ const CalculatePage = (props) => {
         }
     ])
 
+    const [dtfType, setDtfType] = React.useState([
+        {
+            id: 1,
+            image: require('../assets/template/dtf-a.png'),
+            price: 18500
+        },
+        {
+            id: 2,
+            image: require('../assets/template/dtf-b.png'),
+            price: 28500
+        },
+        {
+            id: 3,
+            image: require('../assets/template/dtf-c.png'),
+            price: 33500
+        },
+        {
+            id: 4,
+            image: require('../assets/template/dtf-d.png'),
+            price: 33500
+        },
+        {
+            id: 5,
+            image: require('../assets/template/dtf-e.png'),
+            price: 43500
+        }
+    ])
+
     const handleCheck = (val, idx, type) => {
         console.log(sizeList)
         if (type == "short") {
@@ -104,6 +136,40 @@ const CalculatePage = (props) => {
         totalPayment()
     }
 
+    const totalPayment = () => {
+        let total = 0;
+
+        let idx = dtfType.findIndex(e => e.id == sablonType)
+        let biayaSablon = proType == 2 ? dtfType[idx].price : 0;
+        sizeList.forEach(val => {
+            if (val.qty[0].amount > 0) {
+                total += parseInt(val.qty[0].amount) * (val.price + biayaSablon)
+            }
+            if (val.qty[1].amount > 0) {
+                total += (parseInt(val.qty[1].amount) * (val.price + biayaSablon)) + 9000
+            }
+        })
+
+        setTotal(total)
+    }
+
+    const handleReset = () => {
+        setTotal(0);
+
+        setOpenDTF(false);
+        setSablonType('1');
+        setProType('1');
+
+        let temp = [...sizeList]
+
+        temp.forEach(val => {
+            val.qty[0].amount = "";
+            val.qty[1].amount = "";
+        })
+
+        setSizeList(temp)
+    }
+
     const printSize = (type) => {
         return sizeList.map((val, idx) => {
             return <div className="col-4" style={{ maxWidth: "100%", marginBottom: '1.5%' }}>
@@ -120,35 +186,19 @@ const CalculatePage = (props) => {
         })
     }
 
-    const totalPayment = () => {
-        let total = 0;
-
-        sizeList.forEach(val => {
-            if (val.qty[0].amount > 0) {
-                total += parseInt(val.qty[0].amount) * val.price
-            }
-            if (val.qty[1].amount > 0) {
-                total += (parseInt(val.qty[1].amount) * val.price) + 9000
-            }
+    const printDTF = () => {
+        return dtfType.map((val, idx) => {
+            return <Radio value={val.id.toString()}>
+                <Box boxShadow='2xl' width='24'>
+                    <Image
+                        src={val.image}
+                        alt="dtf-type"
+                        layout='responsive'
+                    />
+                </Box>
+            </Radio>
         })
-
-        setTotal(total)
     }
-
-    const handleReset = () => {
-        setTotal(0)
-
-        let temp = [...sizeList]
-
-        temp.forEach(val => {
-            val.qty[0].amount = "";
-            val.qty[1].amount = "";
-        })
-
-        setSizeList(temp)
-    }
-
-    console.log(sizeList)
 
     return (
         <div>
@@ -161,18 +211,32 @@ const CalculatePage = (props) => {
             />
             <div className='container'>
                 <HeaderPage />
+                {sablonType}
                 <div className='my-3'>
                     <Text fontSize={{ base: '5xl', lg: '6xl' }} marginY='4' fontWeight='bold'>Estimasi Orderan</Text>
                     <div className='row'>
                         <div className='col-md-6'>
                             <FormControl isRequired marginY='5'>
                                 <FormLabel htmlFor='products-type' fontSize='2xl' fontWeight='bold'>Produk</FormLabel>
-                                <RadioGroup onChange={setProType} value={proType}>
+                                <RadioGroup onChange={(e) => {
+                                    setProType(e);
+                                    // totalPayment();
+                                }} value={proType}>
                                     <Stack direction='row'>
-                                        <Radio value='1'>Kaos Polos</Radio>
-                                        <Radio value='2' disabled>Kaos Sablon DTF</Radio>
+                                        <Radio value='1' onClick={() => setOpenDTF(false)}>Kaos Polos</Radio>
+                                        <Radio value='2' onClick={() => setOpenDTF(true)}>Kaos Sablon DTF</Radio>
                                     </Stack>
                                 </RadioGroup>
+                                <Collapse in={openDTF} className='py-3'>
+                                    <RadioGroup onChange={(e) => {
+                                        setSablonType(e);
+                                        totalPayment();
+                                    }} value={sablonType}>
+                                        <Stack direction='row' wrap='wrap' justifyContent='space-between'>
+                                            {printDTF()}
+                                        </Stack>
+                                    </RadioGroup>
+                                </Collapse>
                             </FormControl>
                             <FormControl isRequired marginY='5'>
                                 <FormLabel htmlFor='material-type' fontSize='2xl' fontWeight='bold'>Jenis Kain</FormLabel>
