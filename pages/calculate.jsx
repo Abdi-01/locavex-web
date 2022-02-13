@@ -211,7 +211,6 @@ const CalculatePage = (props) => {
             />
             <div className='container'>
                 <HeaderPage />
-                {sablonType}
                 <div className='my-3'>
                     <Text fontSize={{ base: '5xl', lg: '6xl' }} marginY='4' fontWeight='bold'>Estimasi Orderan</Text>
                     <div className='row'>
