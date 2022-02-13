@@ -21,7 +21,7 @@ const FooterPage = (props) => {
                                 />
                             </Box>
                         </Link>
-                        <Text className='text-muted text-center'>
+                        <Text fontSize={{ base: 'sm', lg: 'md' }} className='text-muted text-center'>
                            Locavex Indonesia, Dsn.Blumbang Rt02/Rw03, Dradah Blumbang, Kedungpring, Kabupaten Lamongan, Jawa Timur 62272
                         </Text>
                     </div>
